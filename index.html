@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+	    <title>My To-Do List</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+	    <script src="main.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <ul class="menu">
+            <li class="link"><a href="#EnterDate">Date</a></li>
+            <li class="link"><a href="#EnterGoals">Enter Goals</a></li>
+            <li class="link"><a href="#Tasks">Tasks Update</a></li>
+            <li class="link"><a href="#TotalTasksDone">Total Tasks Done</a></li>
+        </ul>
+
+        <center>
+            <section id="title">
+            <h1 id="title">To-do Checklist</h1>
+            <div class="line"></div>
+            </section>
+        
+            <section id="EnterDate">
+                <hr>
+                <div>
+                    <h4>Enter the date</h4>
+                    <div class="line"></div>
+                    <input type="date" id="date" name="date" value="2022-05-10">
+                    <button id="submit" onclick="SaveDate()">Submit</button>
+                </div>
+            </section>
+        
+            <section id="EnterGoals">
+                <hr>
+                <h4>Enter the Task Goals</h4>
+                <div class="line"></div>
+                <div>
+                    <label>Byju's Goal</label>
+                    <input type="text" id="ByjuInput" placeholder="Enter the goal">
+                </div>
+                <br>
+                <div>
+                    <label>VHW Goal</label>
+                    <input type="text" id="VhwInput" placeholder="Enter the goal">
+                </div>
+                <br>
+                <div>
+                    <label>Study Goal</label>
+                    <input type="text" id="StudyInput" placeholder="Enter the goal">
+                </div>
+                <br>
+                <button id="apply" onclick="Apply()">Apply</button>
+            </section>
+
+            <section id="Tasks">
+                <hr>
+                <h4>My Tasks</h4>
+                <div class="line"></div>
+                <h4 id="date_of_tasks"></h4>
+                <hr>
+                <br>
+
+                <label id="task_name">Task 1 : Handwriting</label>
+                <div>
+                    <input type="radio" id="task1_done" name ="status1" value="Done"> <label>Done</label>
+                    <input type="radio" id="task1_not_done" name="status1" value="Not Done"> <label>Not Done</label>
+                </div>
+                <label id="task1Stat"></label>
+                <br>
+                <button id="update" onclick="UpdateT1()">Update</button>
+                <br>
+
+                <br>
+                <div>
+                    <label id="task_name">Task 2 : Byju's</label>
+                    <label id="byju_task"></label>
+                </div>
+
+                <div>
+                    <input type="radio" id="task2_done" name ="status2" value="Done"> <label>Done</label>
+                    <input type="radio" id="task2_not_done" name="status2" value="Not Done"> <label>Not Done</label>
+                </div>
+                <label id="task2Stat"></label>
+                <br>
+                <button id="update" onclick="UpdateT2()">Update</button>
+                <br>
+                <br>
+
+                <div>
+                    <label id="task_name">Task 3 : Vacation Homework</label>
+                    <label id="vhw_task"></label>
+                </div>
+                <div>
+                    <input type="radio" id="task3_done" name ="status3" value="Done"> <label>Done</label>
+                    <input type="radio" id="task3_not_done" name="status3" value="Not Done"> <label>Not Done</label>
+                </div>
+                <label id="task3Stat"></label>
+                <br>
+                <button id="update" onclick="UpdateT3()">Update</button>
+                <br>
+                <br>
+
+                <div>
+                    <label id="task_name">Task 4 : Study</label>
+                    <label id="study_task"></label>
+                </div>
+                <div>
+                    <input type="radio" id="task4_done" name ="status4" value="Done"> <label>Done</label>
+                    <input type="radio" id="task4_not_done" name="status4" value="Not Done"> <label>Not Done</label>
+                </div>
+                <label id="task4Stat"></label>
+                <br>
+                <button id="update" onclick="UpdateT4()">Update</button>
+                <br>
+                <br>
+
+                <label id="task_name">Task 5 : Read Alice</label>
+                <div>
+                    <input type="radio" id="task5_done" name ="status5" value="Done"> <label>Done</label>
+                    <input type="radio" id="task5_not_done" name="status5" value="Not Done"> <label>Not Done</label>
+                </div>
+                <label id="task5Stat"></label>
+                <br>
+                <button id="update" onclick="UpdateT5()">Update</button>
+                <br>
+                <br>
+
+                <label id="task_name">Task 6 : Korean</label>
+                <div>
+                    <input type="radio" id="task6_done" name ="status6" value="Done"> <label>Done</label>
+                    <input type="radio" id="task6_not_done" name="status6" value="Not Done"> <label>Not Done</label>
+                </div>
+                <label id="task6Stat"></label>
+                <br>
+                <button id="update" onclick="UpdateT6()">Update</button>
+                <br>
+                <br>
+
+                <label id="task_name">Task 7 : Spanish</label>
+                <div>
+                    <input type="radio" id="task7_done" name ="status7" value="Done"> <label>Done</label>
+                    <input type="radio" id="task7_not_done" name="status7" value="Not Done"> <label>Not Done</label>
+                </div>
+                <label id="task7Stat"></label>
+                <br>
+                <button id="update" onclick="UpdateT7()">Update</button>
+                <br>
+                <br>
+
+                <label id="task_name">Task 8 : Manorama</label>
+                <div>
+                    <input type="radio" id="task8_done" name ="status8" value="Done"> <label>Done</label>
+                    <input type="radio" id="task8_not_done" name="status8" value="Not Done"> <label>Not Done</label>
+                </div>
+                <label id="task8Stat"></label>
+                <br>
+                <button id="update" onclick="UpdateT8()">Update</button>
+                <br>
+                <br>
+            </section>
+
+            <section id="TotalTasksDone">
+                <hr>
+                <div>
+                    <H4>Tasks Done : </H4>
+                    <div class="line"></div>
+                    <label id="all_tasks_done">--</label>
+                </div>
+                <br>
+            </section>
+        
+        </center>     
+    </body>
+</html>

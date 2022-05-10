@@ -1,0 +1,40 @@
+body {
+    background: linear-gradient(#4287f5 0%, #4bf542 100%);
+}
+
+#title {
+    font-family: 'Courgette', cursive;
+}
+
+.line {
+    height: 2px;
+    background-color: black;
+    width: 100px;
+    margin: 20px auto;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position:fixed;
+}
+
+.link {
+    float:left;
+}
+  
+.link a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+  
+.link a:hover {
+    background-color: #111;
+}
